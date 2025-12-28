@@ -8,10 +8,10 @@ services:
     deploy:
       replicas: 4
   auth_service:
-   image: devarajyothi/mypyapp:authimage
-   ports:
+    image: devarajyothi/mypyapp:authimage
+    ports:
      - "5001:5001"
-   deploy:
+    deploy:
       replicas: 3
   book_service:
     image: devarajyothi/mypyapp:bookimage
