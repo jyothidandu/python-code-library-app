@@ -20,13 +20,13 @@ services:
     deploy:
       replicas: 3
   borrow_service:
-    image: devarajyothi/mypyapp:borrowhimage
+    image: devarajyothi/mypyapp:borrowimage
     ports:
       - "5003:5003"
     deploy:
       replicas: 3
  frontend:
-    image: devarajyothi/mypyapp:authimage
+    image: devarajyothi/mypyapp:frontendimage
     ports:
       - "5000:5000"
     deploy:
