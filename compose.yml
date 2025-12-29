@@ -1,4 +1,4 @@
-version: "3"
+version: "3.8"
 
 services:
   db:
@@ -7,6 +7,9 @@ services:
       - "3306:3306"
     deploy:
       replicas: 4
+    networks:
+      - dbnetwork
+      - appnetwork
 
   auth_service:
     image: devarajyothi/mypyapp:authimage
@@ -14,6 +17,9 @@ services:
       - "5001:5001"
     deploy:
       replicas: 3
+    networks:
+      - appnetwork
+      - dbnetwork
 
   book_service:
     image: devarajyothi/mypyapp:bookimage
@@ -21,6 +27,9 @@ services:
       - "5002:5002"
     deploy:
       replicas: 3
+    networks:
+      - appnetwork
+      - dbnetwork
 
   borrow_service:
     image: devarajyothi/mypyapp:borrowimage
@@ -28,6 +37,9 @@ services:
       - "5003:5003"
     deploy:
       replicas: 3
+    networks:
+      - appnetwork
+      - dbnetwork
 
   frontend:
     image: devarajyothi/mypyapp:frontendimage
@@ -35,6 +47,12 @@ services:
       - "5000:5000"
     deploy:
       replicas: 3
+    networks:
+      - appnetwork
+      - dbnetwork
 
-  
-    
+networks:
+  appnetwork:
+    driver: overlay
+  dbnetwork:
+    driver: overlay
