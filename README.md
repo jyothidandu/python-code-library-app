@@ -4,7 +4,7 @@ docker build -t dbimage database/ <br />
 docker build -t authimage auth/ <br />
 docker build -t bookimage book/ <br />
 docker build -t borrowimage borrow/ <br />
-docker build -t appimage . <br /> <br /> <br /> <br />
+docker build -t frontendimage . <br /> <br /> <br /> <br />
 
 
 docker network create mynet <br /> <br /> <br /> <br />
