@@ -50,6 +50,8 @@ services:
     networks:
       - appnetwork
       - dbnetwork
+    depends_on:
+      - "db"
 
 networks:
   appnetwork:
