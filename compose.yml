@@ -41,7 +41,7 @@ services:
       - appnetwork
       - dbnetwork
 
-  frontend:
+  app_service:
     image: devarajyothi/mypyapp:appimage
     ports:
       - "5000:5000"
