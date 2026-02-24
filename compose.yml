@@ -42,7 +42,7 @@ services:
       - dbnetwork
 
   app_service:
-    image: evarajyothi/pythonapp:appimage
+    image: devarajyothi/pythonapp:appimage
     ports:
       - "5000:5000"
     deploy:
