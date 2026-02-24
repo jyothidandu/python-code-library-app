@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   db:
-    image: devarajyothi/mypyapp:dbimage
+    image: devarajyothi/pythonapp:dbimage
     ports:
       - "3306:3306"
     deploy:
@@ -12,7 +12,7 @@ services:
       - appnetwork
 
   auth_service:
-    image: devarajyothi/mypyapp:authimage
+    image: devarajyothi/pythonapp:authimage
     ports:
       - "5001:5001"
     deploy:
@@ -22,7 +22,7 @@ services:
       - dbnetwork
 
   book_service:
-    image: devarajyothi/mypyapp:bookimage
+    image: devarajyothi/pythonapp:bookimage
     ports:
       - "5002:5002"
     deploy:
@@ -32,7 +32,7 @@ services:
       - dbnetwork
 
   borrow_service:
-    image: devarajyothi/mypyapp:borrowimage
+    image: devarajyothi/pythonapp:borrowimage
     ports:
       - "5003:5003"
     deploy:
@@ -42,7 +42,7 @@ services:
       - dbnetwork
 
   app_service:
-    image: devarajyothi/mypyapp:appimage
+    image: evarajyothi/pythonapp:appimage
     ports:
       - "5000:5000"
     deploy:
