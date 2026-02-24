@@ -42,7 +42,7 @@ services:
       - dbnetwork
 
   frontend:
-    image: devarajyothi/mypyapp:frontendimage
+    image: devarajyothi/mypyapp:appimage
     ports:
       - "5000:5000"
     deploy:
